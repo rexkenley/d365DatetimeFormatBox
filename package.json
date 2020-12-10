@@ -1,7 +1,8 @@
 {
-  "name": "pcf-project",
+  "name": "d365DatetimeFormatBox",
   "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "description": "A datetime box with formatted values",
+  "author": "Rex Kenley Tan",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { initializeIcons } from "@fluentui/react/lib/Icons";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-import DTFB from "../src/tsx/datetimeFormatBox";
+import DTFB, { IDatetimeFormatBoxProps } from "../src/tsx/datetimeFormatBox";
 
 export class DatetimeFormatBox
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -65,21 +65,20 @@ export class DatetimeFormatBox
     this.isControlDisabled = isControlDisabled;
     this.isVisible = isVisible;
 
-    ReactDOM.render(
-      React.createElement(DTFB, {
-        value: this.value,
-        formatString: this.formatString,
-        disabled: this.isControlDisabled,
-        required: false,
-        hidden: !this.isVisible,
-        onChange: (dateValue: Date | null) => {
-          this.value = dateValue;
-          this.updatedByReact = true;
-          this.notifyOutputChanged();
-        }
-      }),
-      this.container
-    );
+    const props: IDatetimeFormatBoxProps = {
+      value: this.value,
+      formatString: this.formatString,
+      disabled: this.isControlDisabled,
+      required: false,
+      hidden: !this.isVisible,
+      onChange: (dateValue: Date | null) => {
+        this.value = dateValue;
+        this.updatedByReact = true;
+        this.notifyOutputChanged();
+      }
+    };
+
+    ReactDOM.render(React.createElement(DTFB, props), this.container);
   }
 
   public getOutputs(): IOutputs {
