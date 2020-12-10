@@ -7,6 +7,17 @@ import format from "date-fns/format";
 import isMatch from "date-fns/isMatch";
 import parse from "date-fns/parse";
 
+/**
+ * An interface for the props of DatetimeFormatBox
+ *
+ * @interface IDatetimeFormatBoxProps
+ * @property {Date | null} value - datetime or date value
+ * @property {string} formatString - how the value is to be formatted
+ * @property {boolean} disabled - disables DatetimeFormatBox
+ * @property {boolean} required - makes DatetimeFormatBox required
+ * @property {boolean} hidden - hides DatetimeFormatBox
+ * @property {(value: Date | null) => void} onChange - event that fires when a change occurs
+ */
 export interface IDatetimeFormatBoxProps {
   value: Date | null;
   formatString: string;
