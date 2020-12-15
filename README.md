@@ -1,6 +1,6 @@
 # d365DatetimeFormatBox
 
-👍 A datetime box with formatted values 👍
+👍 A datetime box with formatted values
 
 **Settings**
 
