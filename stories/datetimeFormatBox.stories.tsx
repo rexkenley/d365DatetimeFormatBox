@@ -39,9 +39,10 @@ OnChangeControl.args = {
   onChange: action("onChange")
 };
 
-export const DateFormatDayMonthYear = Template.bind({});
-DateFormatDayMonthYear.args = {
-  formatString: "dd.M.yyyy",
+export const DateFormatddMMyyyy = Template.bind({});
+DateFormatddMMyyyy.storyName = "Date Format dd.MM.yyyy";
+DateFormatddMMyyyy.args = {
+  formatString: "dd.MM.yyyy",
   value: new Date(Date.now()),
   onChange: action("onChange")
 };
