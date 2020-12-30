@@ -3,9 +3,9 @@ import { Story } from "@storybook/react/types-6-0";
 import { action } from "@storybook/addon-actions";
 import { initializeIcons } from "@fluentui/react/lib/Icons";
 
-initializeIcons();
-
 import DatetimeFormatBox from "../src/tsx/datetimeFormatBox";
+
+initializeIcons();
 
 export default {
   title: "MaskedDateTimeBox",
